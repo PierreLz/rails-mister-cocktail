@@ -1,0 +1,13 @@
+<div class="container text-center">
+  <div class="header-title text-center">
+    <h3><strong><%= @cocktail.name %></strong></h3>
+  </div>
+    <div class="cocktail-description text-center">
+      <% @doses.each do |dose|%>
+       <p><%= dose.name %></p>
+        <p><%= dose.description %></p>
+      <% end %>
+    </div>
+    <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
+    <%= link_to "Add dose", cocktails_path, class: "btn btn-default" %>
+</div>

@@ -1,0 +1,14 @@
+<div class="cocktail-container text-center">
+  <div class="header-title text-center">
+    <h3><stong>Add a favorite cocktail</strong></h3>
+  </div>
+  <div class="form-for-user text-center">
+    <%= simple_form_for(@new_cocktail) do |c| %>
+      <%= c.label :name %>
+      <%= c.text_field :name %>
+      <%= c.submit %>
+    <% end %>
+  </div>
+  <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
+</div>
+
