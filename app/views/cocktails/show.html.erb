@@ -7,7 +7,6 @@
         <p>- <%= dose.name%> <%= dose.description%> <%= dose.ingredient.name %></p>
       <% end %>
     </div>
-
     <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
-    <%= link_to "Add dose", cocktails_path, class: "btn btn-default" %>
+    <%= link_to "Custom cocktail", new_cocktail_dose_path(@cocktail), class: "btn btn-default" %>
 </div>

@@ -1,0 +1,14 @@
+<div class="container text-center">
+  <div class="header-title text-center">
+    <strong><h3>Custom the cocktail</h3></strong>
+  </div>
+  <div class="container text-center">
+    <div id="form">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :ingredient, collection: @ingredients %>
+      <%= f.input :description %>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
