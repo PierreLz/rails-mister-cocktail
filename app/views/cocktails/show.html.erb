@@ -11,11 +11,7 @@
     </div>
     <h4 class="text-center"><strong>Custom <%= @cocktail.name %></strong></h4>
     <div id="form" class="text-center">
-      <%= simple_form_for [@cocktail, @new_dose] do |f| %>
-        <%= f.input :ingredient_id, collection: @ingredients %>
-        <%= f.input :description %>
-        <%= f.submit "Add recepe ! " %>
-      <% end %>
+      <%= render 'form_add' %>
       <div class="button-back-padded"><%= link_to "Back", cocktails_path, class: "btn btn-default"%></div>
     </div>
 </div>
