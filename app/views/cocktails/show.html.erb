@@ -5,7 +5,7 @@
     <div class="container-description text-center">
       <% @cocktail.doses.each do |dose|%>
       <div class="cocktail-description">
-        <li style="list-style: none"><%= dose.description %> <%= dose.ingredient.name %></li>
+        <li style="list-style: none"><%= dose.description %> <%= dose.ingredient.name %> <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure ?"} %></li>
       <% end %>
       </div>
     </div>
