@@ -4,9 +4,18 @@
   </div>
     <div class="container-description text-center">
       <% @cocktail.doses.each do |dose|%>
+      <div class="cocktail-description"
         <li style="list-style: none"><%= dose.description %> <%= dose.ingredient.name %></li>
       <% end %>
+      </div>
     </div>
-    <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
-    <%= link_to "Custom cocktail", new_cocktail_dose_path(@cocktail), class: "btn btn-default" %>
+    <h4><strong>Custom <%= @cocktail.name %></strong></h4>
+    <div id="form">
+      <%= simple_form_for [@cocktail, @new_dose] do |f| %>
+        <%= f.input :ingredient_id, collection: @ingredients %>
+        <%= f.input :description %>
+        <%= f.submit "Add recepe ! " %>
+      <% end %>
+      <div class="button-back-padded"><%= link_to "Back", cocktails_path, class: "btn btn-default"%></div>
+    </div>
 </div>
