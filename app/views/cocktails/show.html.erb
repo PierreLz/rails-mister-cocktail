@@ -3,8 +3,8 @@
     <h3><strong><%= @cocktail.name %></strong></h3>
   </div>
     <div class="container-description text-center">
-      <% @doses.each do |dose|%>
-        <p>- <%= dose.name%> <%= dose.description%> <%= dose.ingredient.name %></p>
+      <% @cocktail.doses.each do |dose|%>
+        <li style="list-style: none"><%= dose.description %> <%= dose.ingredient.name %></li>
       <% end %>
     </div>
     <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
