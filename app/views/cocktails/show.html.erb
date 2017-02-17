@@ -4,13 +4,13 @@
   </div>
     <div class="container-description text-center">
       <% @cocktail.doses.each do |dose|%>
-      <div class="cocktail-description"
+      <div class="cocktail-description">
         <li style="list-style: none"><%= dose.description %> <%= dose.ingredient.name %></li>
       <% end %>
       </div>
     </div>
-    <h4><strong>Custom <%= @cocktail.name %></strong></h4>
-    <div id="form">
+    <h4 class="text-center"><strong>Custom <%= @cocktail.name %></strong></h4>
+    <div id="form" class="text-center">
       <%= simple_form_for [@cocktail, @new_dose] do |f| %>
         <%= f.input :ingredient_id, collection: @ingredients %>
         <%= f.input :description %>
