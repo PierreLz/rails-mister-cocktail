@@ -1,12 +1,14 @@
-<div class="header-title text-center">
-  <h3><strong>My favorite cocktail</strong>s</h3>
-</div>
+<div class="banner" style="background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), url(<%= image_path 'background_home.jpg' %>);">
+  <div class="header-title text-center">
+    <h3><strong>My favorite cocktails</strong></h3>
+  </div>
 
-<div class="container-cocktails">
-  <div class="cocktails-name text-center">
-    <% @cocktails.each do |cocktail| %>
-    <p><%= link_to cocktail.name, cocktail_path(cocktail.id) %></p>
-    <% end %>
-    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-default" %>
+  <div class="container-cocktails">
+    <div class="cocktails-name text-center">
+      <% @cocktails.each do |cocktail| %>
+      <p><%= link_to cocktail.name, cocktail_path(cocktail.id) %></p>
+      <% end %>
+      <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-default" %>
+    </div>
   </div>
 </div>

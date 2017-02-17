@@ -47,6 +47,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'figaro'
   gem 'cloudinary', '1.1.0'
+  gem "attachinary", github: "assembler/attachinary"
 end
 
 group :development do
