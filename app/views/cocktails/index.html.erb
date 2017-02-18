@@ -1,22 +1,25 @@
 <div class="banner" style="background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), url(<%= image_path 'background_home.jpg' %>);">
   <div class="header-title text-center">
-    <h3><strong>My favorite cocktails</strong></h3>
+    <h2><strong>My favorite cocktails</strong></h2>
+  </div>
+  <div id="btn-add" class="text-center">
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
   </div>
 
   <div class="container-fluide">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
         <div class="col-xs-12 col-sm-4">
-          <div class="card">
-            <div class="cocktails-name text-center">
-              <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+          <div class="card" style="width: 20rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-block text-center">
+              <h3 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h3>
+              <p class="card-text">A fresh and flavored cocktail</p>
+              <%= link_to 'Discover', cocktail_path(cocktail.id), class: "btn btn-default" %>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-  </div>
-  <div id="btn-add" class="text-center padded">
-    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-default" %>
   </div>
 </div>
