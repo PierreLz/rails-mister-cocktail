@@ -21,7 +21,18 @@
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 50px;
+  width: 45px;
+}
+
+/* Navbar title */
+.navbar-title {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title h3 {
+  margin: 15px;
 }
 
 /* Navbar right section (with form, links, button) */
