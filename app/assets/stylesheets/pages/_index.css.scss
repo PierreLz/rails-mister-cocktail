@@ -1,35 +1,4 @@
 @import "home";
 @import "show";
 @import "new";
-
-.banner-index {
-  background-image: image-url("back.jpg");
-  background-repeat: no-repeat;
-  background-size: 1300px 915px;
-}
-
-.card {
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 15px;
-  background-color: white;
-  position: relative;
-  display: inline-block;
-}
-.col-xs-12.col-sm-4 {
-  position: relative;
-  padding-top: 15px;
-  padding-left: 15px;
-}
-
-#btn-add {
-  margin-top: 15px;
-}
-.container {
-  text-align: center
-}
-
-.header-title h2 {
-  color: white;
-}
-
+@import "display_cocktails";
