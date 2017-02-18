@@ -16,9 +16,8 @@
   </head>
 
   <body>
+    <!--disable_nav method is defined in application_controller-->
     <%= render 'shared/navbar' unless @disable_nav %>
     <%= yield %>
-
-
   </body>
 </html>

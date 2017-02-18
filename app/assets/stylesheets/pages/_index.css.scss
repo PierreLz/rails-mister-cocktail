@@ -2,6 +2,14 @@
 @import "show";
 @import "new";
 
+.card {
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 15px;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+}
 .col-xs-12.col-sm-4 {
   position: relative;
   padding-top: 15px;
@@ -11,17 +19,11 @@
 #btn-add {
   margin-top: 15px;
 }
-
-.card {
-  border-radius: 5px;
-  margin: auto;
-  margin-top: 15px;
-  background-color: white;
-  position: relative;
-  display: inline-block;
-}
-
 .container {
   text-align: center
+}
+
+.header-title h2 {
+  color: white;
 }
 
