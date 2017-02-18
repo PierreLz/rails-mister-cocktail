@@ -1,12 +1,16 @@
 <div class="banner" style="background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), url(<%= image_path 'background_home.jpg' %>);">
-  <div class="cocktail-container text-center">
-  <div class="header-title text-center">
-    <h3><stong>Add a favorite cocktail</strong></h3>
-  </div>
-  <div class="form-for-user text-center">
-    <div class="hidden" ><%= @cocktail %></div>
-      <%= render 'form_new_cocktail', cocktaik: @cocktail%>
+    <div class="cocktail-container text-center">
+      <div class="header-title text-center">
+        <h3><stong>Add a favorite cocktail</strong></h3>
+      </div>
+      <div id="btn-add-name" class="card">
+        <div class="form-for-user text-center">
+          <div class="hidden"><%= @cocktail %></div>
+          <%= render 'form_new_cocktail', cocktaik: @cocktail%>
+        </div>
+      </div>
+      <div class="text-center padded">
+        <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
+      </div>
     </div>
-    <%= link_to "Back", cocktails_path, class: "btn btn-default" %>
-  </div>
 </div>

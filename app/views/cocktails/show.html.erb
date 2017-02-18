@@ -1,27 +1,32 @@
  <div class="banner" style="background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), url(<%= image_path 'background_home.jpg' %>);">
   <div class="container text-center">
-    <div class="card">
-    <div class="header-title text-center">
-      <h3><strong><%= @cocktail.name %></strong></h3>
+    <div class="box">
+      <div class="header-title text-center">
+        <h3><strong><%= @cocktail.name %></strong></h3>
+      </div>
+      <div class="container-description text-center">
+        <% @cocktail.doses.each do |dose|%>
+          <div class="cocktail-dose">
+            <li style="list-style: none">
+              <p><%= dose.description %> <%= dose.ingredient.name %> <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure ?"} do %>
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <% end %>
+              </p>
+            </li>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="container-description text-center">
-      <% @cocktail.doses.each do |dose|%>
-        <div class="cocktail-dose">
-          <li style="list-style: none"><p><%= dose.description %> <%= dose.ingredient.name %> <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure ?"} do %>
-            <i class="fa fa-times" aria-hidden="true"></i>
-            <% end %></p></li>
-        </div>
-      <% end %>
+    <div class="box">
+      <div class="header-title text-center">
+        <h3><strong>Custom <%= @cocktail.name %></strong></h3>
+      </div>
+      <div id="form" class="text-center">
+        <%= render 'form_add' %>
+      </div>
     </div>
+    <div class="button-back-padded"><%= link_to "Back", cocktails_path, class: "btn btn-default"%>
     </div>
-    <div class="card">
-    <div class="header-title text-center">
-      <h3 ><strong>Custom <%= @cocktail.name %></strong></h3>
-    </div>
-    <div id="form" class="text-center">
-      <%= render 'form_add' %>
-    </div>
-    </div>
-    <div class="button-back-padded"><%= link_to "Back", cocktails_path, class: "btn btn-default"%></div>
   </div>
 </div>
+

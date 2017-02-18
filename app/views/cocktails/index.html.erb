@@ -3,12 +3,20 @@
     <h3><strong>My favorite cocktails</strong></h3>
   </div>
 
-  <div class="container-cocktails">
-    <div class="cocktails-name text-center">
+  <div class="container-fluide">
+    <div class="row">
       <% @cocktails.each do |cocktail| %>
-      <p><%= link_to cocktail.name, cocktail_path(cocktail.id) %></p>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <div class="cocktails-name text-center">
+              <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+            </div>
+          </div>
+        </div>
       <% end %>
-      <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-default" %>
     </div>
+  </div>
+  <div id="btn-add" class="text-center padded">
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-default" %>
   </div>
 </div>

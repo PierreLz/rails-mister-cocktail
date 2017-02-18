@@ -1,3 +1,14 @@
 @import "home";
 @import "show";
+@import "new";
+
+.col-xs-12.col-sm-4 {
+  position: relative;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+#btn-add {
+  margin-top: 15px;
+}
 
