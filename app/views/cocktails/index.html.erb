@@ -6,19 +6,18 @@
     <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-primary" %>
   </div>
 
-  <div class="container-fluide">
-    <div class="row">
+  <div class="container">
+    <div class="card-deck">
       <% @cocktails.each do |cocktail| %>
-        <div class="col-xs-12 col-sm-4">
           <div class="card" style="width: 20rem;">
             <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-block text-center">
               <h3 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h3>
               <p class="card-text">A fresh and flavored cocktail</p>
-              <%= link_to 'Discover', cocktail_path(cocktail.id), class: "btn btn-default" %>
+              <div><%= link_to 'Custom', cocktail_path(cocktail.id), class: "btn btn-default" %>
+              </div>
             </div>
           </div>
-        </div>
       <% end %>
     </div>
   </div>
