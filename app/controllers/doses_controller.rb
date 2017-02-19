@@ -10,8 +10,10 @@ class DosesController < ApplicationController
     @new_dose.cocktail = @cocktail
     @ingredients = Ingredient.all
     if @new_dose.save
+      flash[:notice] = "Ingredient created!"
       redirect_to cocktail_path(@cocktail)
     else
+      flash[:notice] = "You need an ingredient"
       render 'cocktails/show'
     end
   end
@@ -29,6 +31,6 @@ class DosesController < ApplicationController
   end
 
   def dose_params
-    params.require(:dose).permit(:ingredient_id, :description)
+    params.require(:dose).permit(:description, :ingredient_id)
   end
 end

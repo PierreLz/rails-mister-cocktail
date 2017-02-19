@@ -1,5 +1,5 @@
 <!-- form to add  recepe to cocktail -->
-<%= simple_form_for [@cocktail, @new_dose] do |f| %>
+<%= simple_form_for [cocktail, new_dose] do |f| %>
   <%= f.input :ingredient_id, collection: @ingredients %>
   <%= f.input :description %>
   <div class="button-add-recepe"><%= f.submit "Add recepe !", class:"btn btn-primary " %></div>
