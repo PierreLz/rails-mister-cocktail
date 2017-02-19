@@ -13,7 +13,7 @@ class DosesController < ApplicationController
       flash[:notice] = "Ingredient created!"
       redirect_to cocktail_path(@cocktail)
     else
-      flash[:notice] = "You need an ingredient"
+      flash[:notice] = "You need an ingredient which is not already in the recepe"
       render 'cocktails/show'
     end
   end
