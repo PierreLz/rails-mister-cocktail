@@ -66,14 +66,15 @@ group :development do
 
   gem 'figaro'
 
-  gem 'cloudinary', '1.1.0'
-
-  gem "attachinary", github: "assembler/attachinary"
-
-  gem 'carrierwave', '~> 0.11.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+
+gem 'cloudinary', '1.1.0'
+
+gem "attachinary", github: "assembler/attachinary"
+
+gem 'carrierwave', '~> 0.11.2'
