@@ -25,11 +25,7 @@
         <h3><strong>Custom <%= @cocktail.name %></strong></h3>
       </div>
       <div id="form" class="text-center">
-        <div class="notice">
-          <% if flash[:notice] %>
-            <p><%= flash[:notice] %></p>
-          <% end %>
-        </div>
+        <%= render 'shared/flashes' %>
         <%= render 'shared/form_add', cocktail: @cocktail, new_dose: @new_dose %>
       </div>
     </div>
