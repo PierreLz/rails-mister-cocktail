@@ -2,6 +2,7 @@
   background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), image-url("back.jpg") no-repeat center;
   background-size: 1300px 915px;
   background-size: cover;
+  margin-top: -10px;
 }
 
 .card {
@@ -11,6 +12,7 @@
   background-color: white;
   position: relative;
   display: inline-block;
+  box-shadow: 2px 2px 10px black;
 }
 
 .col-xs-12.col-sm-4 {
@@ -26,6 +28,20 @@
   text-align: center
 }
 
+.header-title {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 80px;
+}
+
 .header-title h2 {
   color: white;
+  justify: center;
+}
+
+.img-card {
+  border-bottom: 1px solid grey;
+}
+
+.custom {
+  margin-bottom: 15px;
 }

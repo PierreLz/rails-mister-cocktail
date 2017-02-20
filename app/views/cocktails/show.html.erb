@@ -1,6 +1,9 @@
- <div class="banner" style="background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), url(<%= image_path 'back.jpg' %>);">
+ <div class="banner banner-margin" style="background: linear-gradient(-150deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 0%), url(<%= image_path 'back.jpg' %>);">
   <div class="container text-center">
     <div class="box">
+      <div class="img-cocktail-box">
+      <%= cl_image_tag @cocktail.photo, height: 200, width: 400, crop: :fill %>
+      </div>
       <div class="header-title text-center">
         <h3><strong><%= @cocktail.name %></strong></h3>
       </div>

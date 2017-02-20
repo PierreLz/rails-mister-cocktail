@@ -1,7 +1,37 @@
-#btn-add-name {
-  padding-top: 25px;
-  height: 90px;
-  width: 600px;
-  border-radius: 5px;
+.cocktail-container {
+  margin-top: -10px;
 }
 
+
+#btn-add-name {
+  padding-top: 25px;
+  height: 200px;
+  width: 450px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.inputs {
+  text-align: center
+}
+
+.simple_form div.input {
+  margin-bottom: 10px;
+  clear: both; /* Required for Webkit, but not for Gecko */
+}
+
+.simple_form label {
+  float: left;
+  width: 100px;
+  text-align: center;
+  margin: 2px 10px;
+}
+
+#cocktail_name {
+  width: 200px;
+  margin-left: 0px;
+}
+
+.button-done {
+  margin-top: 15px;
+}
